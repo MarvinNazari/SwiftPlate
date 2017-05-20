@@ -329,8 +329,10 @@ let authorName = arguments.authorName ?? askForAuthorName()
 let authorEmail = arguments.authorEmail ?? askForAuthorEmail()
 let gitHubURL = arguments.githubURL ?? askForGitHubURL(destination: destination)
 let organizationName = arguments.organizationName ?? askForOptionalInfo(question: "🏢  What's your organization name?")
-let useCocoapods = askForBooleanInfo(question: "🛠  Use Cocoapods to develop and test your project?")
-let useQuickAndNimble = askForBooleanInfo(question: "🔍  Use Quick and Nimble testing frameworks? (via Cocoapods)")
+// let useCocoapods = askForBooleanInfo(question: "🛠  Use Cocoapods to develop and test your project?")
+let useCocoapods = true
+// let useQuickAndNimble = askForBooleanInfo(question: "🔍  Use Quick and Nimble testing frameworks? (via Cocoapods)")
+let useQuickAndNimble = true
 let installCocoapods = useCocoapods || useQuickAndNimble
 
 print("---------------------------------------------------------------------")

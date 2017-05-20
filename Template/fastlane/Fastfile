@@ -25,7 +25,7 @@ platform :ios do
 
 		# Just build the watchOS target (no tests)
 		xcodebuild(
-			project: "{PROJECT}.xcodeproj",
+			workspace: "{PROJECT}.xcworkspace",
 		    scheme: "{PROJECT}-watchOS",
 		    clean: true,
 		    build: true
@@ -33,7 +33,7 @@ platform :ios do
 
 		# Build and test the macOS target
 		scan(
-			project: "{PROJECT}.xcodeproj",
+			workspace: "{PROJECT}.xcworkspace",
 			scheme: "{PROJECT}-macOS",
 			devices: [
 				# (deliberately empty, will use the mac this is running on)
@@ -44,7 +44,7 @@ platform :ios do
 
 		# Build and test the iOS target
 		scan(
-			project: "{PROJECT}.xcodeproj",
+			workspace: "{PROJECT}.xcworkspace",
 			scheme: "{PROJECT}-iOS",
 			devices: [
 				"iPhone SE",
@@ -57,7 +57,7 @@ platform :ios do
 
 		# Build and test the tvOS target
 		scan(
-			project: "{PROJECT}.xcodeproj",
+			workspace: "{PROJECT}.xcworkspace",
 			scheme: "{PROJECT}-tvOS",
 			devices: [
 				"Apple TV 1080p",
